@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Red Hat Mono";
+    src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+}
+
+* {
+    font-family: "Red Hat Mono", monospace;
+    font-style: normal;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top section */
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo-suffix {
+    height: 10px;
+    width: 10px;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+.hamburger {
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.logo,
+.hamburger { transition: transform 0.3s ease-in-out; }
+.logo:hover,
+.hamburger:hover { transform: scale(1.1); }
