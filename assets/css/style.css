@@ -102,3 +102,16 @@ body {
 .rect-blocker {
     background-color: var(--black);
 }
+
+.socials-container {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: fit-content;
+}
+
+.social-icon { 
+    margin-right: 30px;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; 
+}
+.social-icon:hover { transform: scale(1.1); }
