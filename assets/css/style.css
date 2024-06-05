@@ -15,11 +15,25 @@ html {
 }
 
 body {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     margin: 0 30px 0 30px;
+}
+
+/* Scroll dots (scrollbar) */
+
+.scroll-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    right: 43px;
+    top: 40vh;
+}
+
+.scroll-container .dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--cyan-accent);
 }
 
 /* Top section */
@@ -64,9 +78,11 @@ body {
 /* Intro section */
 
 .intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: var(--white);
-    margin-top: 200px;
-    width: fit-content;
+    height: 650px;
 }
 
 .intro-name {
@@ -77,6 +93,8 @@ body {
 .intro-container h1 {
     font-size: 50px;
     margin-bottom: 30px;
+    background-color: var(--black);
+    width: fit-content;
 }
 
 .cyan-accent{
@@ -90,28 +108,75 @@ body {
 
 .intro-rect {
     position: absolute;
-    top: 80px;
-    right: 562px;
-    width: 350px;
+    top: 10%;
+    left: 40%;
+    width: 20vw;
     height: 550px;
     border-radius: 10px;
-    border: 6px solid var(--Cyan-Accent, #00FFE0);
+    border: 6px solid var(--cyan-accent);
     z-index: -1;  
 }
 
-.rect-blocker {
-    background-color: var(--black);
-}
-
 .socials-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
     margin-top: 40px;
     margin-left: 20px;
     width: fit-content;
 }
 
 .social-icon { 
-    margin-right: 30px;
     cursor: pointer; 
     transition: all 0.3s ease-in-out; 
 }
 .social-icon:hover { transform: scale(1.1); }
+
+.avatar {
+    position: absolute;
+    top: -40px;
+    right: 220px;
+    z-index: -10;
+}
+
+.avatar img {
+    width: 600px;
+    height: 800px;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-text {
+    color: gray;
+    font-size: 20px;
+}   
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .intro-rect {
+        display: none;
+    }
+
+    .avatar {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-container {
+        display: none;
+    }
+
+    .socials-container {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        gap: 40px;
+    }
+}
